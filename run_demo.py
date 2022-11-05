@@ -51,13 +51,7 @@ class Demo(nn.Module):
         self.args = args
 
         if args.model == 'vox':
-            # model_path = 'checkpoints/vox.pt'
-            # model_path = '/home/maoyexin/LIA-main/exps/v2/checkpoint/080000.pt'
-            model_path = '/home/maoyexin/LIA-main-myx/exps/v1/checkpoint/290000.pt'
-        elif args.model == 'taichi':
-            model_path = 'checkpoints/taichi.pt'
-        elif args.model == 'ted':
-            model_path = 'checkpoints/ted.pt'
+            model_path = 'checkpoints/vox.pt'
         else:
             raise NotImplementedError
 
@@ -101,7 +95,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--size", type=int, default=256)
     parser.add_argument("--channel_multiplier", type=int, default=1)
-    parser.add_argument("--model", type=str, choices=['vox', 'taichi', 'ted'], default='')
+    parser.add_argument("--model", type=str, default='vox')
     parser.add_argument("--latent_dim_style", type=int, default=512)
     parser.add_argument("--latent_dim_motion", type=int, default=20)
     parser.add_argument("--source_path", type=str, default='')
