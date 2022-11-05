@@ -33,6 +33,7 @@ To obtain demos, you could run following commands, generated results will be sav
 python run_demo.py --source_path <SOURCE_PATH> --driving_path <DRIVING_PATH>
 ```
 `<SOURCE_PATH>`  is the source image, `<DRIVING_PATH>`  is the driving video
+
 For example 
 ```shell script
 python run_demo.py --source_path ./data/vox/macron.png --driving_path ./data/vox/driving1.mp4
