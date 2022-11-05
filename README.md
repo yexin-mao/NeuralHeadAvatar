@@ -38,7 +38,7 @@ CUDA_VISIBLE_DEVICES=0 python run_demo.py --source_path <SOURCE_PATH> --driving_
 
 For example 
 ```shell script
-CUDA_VISIBLE_DEVICES=0 python run_demo.py --source_path ./data/vox/macron.png --driving_path ./data/vox/driving2.mp4
+CUDA_VISIBLE_DEVICES=0 python run_demo.py --source_path ./data/vox/taylor.png --driving_path ./data/vox/driving2.mp4
 ```
 
 ## Acknowledgement
