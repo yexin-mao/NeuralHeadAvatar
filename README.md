@@ -27,8 +27,10 @@ CUDA_VISIBLE_DEVICES=0 python evaluation.py --dataset <DATASET> --save_path <SAV
 Generated videos will be save under `<SAVE_PATH>`.
 
 ## 4. Demo
-Download pre-trained checkpoints from [here](https://drive.google.com/drive/folders/1N4QcnqUQwKUZivFV-YeBuPyH4pGJHooc?usp=sharing) and put models under `./checkpoints`. We have provided several demo source images and driving videos in `./data`. 
-To obtain demos, you could run following commands, generated results will be saved under `./res`.
+Download pre-trained checkpoints from [Google Drive](https://drive.google.com/file/d/1va7e9ZJZVKUkmB_z49G10pODnH9aSv1X/view?usp=share_link) and put it in `./checkpoints`. 
+
+Several demo source images and driving videos are provided in `./data`. 
+You can run the following commands to generate demo videos. The results will be saved in `./res`.
 ```shell script
 CUDA_VISIBLE_DEVICES=0 python run_demo.py --source_path <SOURCE_PATH> --driving_path <DRIVING_PATH>
 ```
