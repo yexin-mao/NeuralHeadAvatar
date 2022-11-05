@@ -7,7 +7,7 @@ import torchvision
 import os
 from tqdm import tqdm
 import torchvision.transforms as transforms
-from dataset import Vox256_eval, Taichi_eval, TED_eval
+from dataset import Vox256_eval
 from torch.utils import data
 from PIL import Image
 import lpips
@@ -61,15 +61,8 @@ class Eva(nn.Module):
         )
 
         if args.dataset == 'vox':
-            # path = 'checkpoints/vox.pt'
-            path = '/home/maoyexin/LIA-main-myx/exps/v1/checkpoint/220000.pt'
+            path = 'checkpoints/vox.pt'
             dataset = Vox256_eval(transform)
-        elif args.dataset == 'taichi':
-            path = 'checkpoints/taichi.pt'
-            dataset = Taichi_eval(transform)
-        elif args.dataset == 'ted':
-            path = 'checkpoints/ted.pt'
-            dataset = TED_eval(transform)
         else:
             raise NotImplementedError
 
@@ -127,7 +120,7 @@ if __name__ == '__main__':
     parser.add_argument("--size", type=int, default=256)
     parser.add_argument("--latent_dim_style", type=int, default=512)
     parser.add_argument("--latent_dim_motion", type=int, default=20)
-    parser.add_argument("--dataset", type=str, choices=['vox', 'taichi', 'ted'], default='vox')
+    parser.add_argument("--dataset", type=str, choices=['vox'], default='vox')
     parser.add_argument("--save_path", type=str, default='./evaluation_res')
     args = parser.parse_args()
 
