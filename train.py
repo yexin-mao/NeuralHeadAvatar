@@ -2,7 +2,7 @@ import argparse
 import os
 import torch
 from torch.utils import data
-from dataset import Vox256, Taichi, TED
+from dataset import Vox256
 import torchvision
 import torchvision.transforms as transforms
 from trainer import Trainer
