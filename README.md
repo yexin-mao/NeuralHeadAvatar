@@ -27,7 +27,7 @@ CUDA_VISIBLE_DEVICES=0 python evaluation.py --dataset <DATASET> --save_path <SAV
 Generated videos will be save under `<SAVE_PATH>`.
 
 ## 4. Demo
-Download pre-trained checkpoints from [Google Drive](https://drive.google.com/file/d/1va7e9ZJZVKUkmB_z49G10pODnH9aSv1X/view?usp=share_link) and put it in `./checkpoints`. 
+Download pre-trained checkpoints from [Google Drive](https://drive.google.com/file/d/1va7e9ZJZVKUkmB_z49G10pODnH9aSv1X/view?usp=share_link) and put it in `./checkpoints`. You should rename it as `vox.pt`.
 
 Several demo source images and driving videos are provided in `./data`. 
 You can run the following commands to generate demo videos. The results will be saved in `./res`.
