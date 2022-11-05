@@ -70,15 +70,9 @@ def main(rank, world_size, args):
         transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))]
     )
 
-    if args.dataset == 'ted':
-        dataset = TED('train', transform, True)
-        dataset_test = TED('test', transform)
-    elif args.dataset == 'vox':
+    if args.dataset == 'vox':
         dataset = Vox256('train', transform, False)
         dataset_test = Vox256('test', transform)
-    elif args.dataset == 'taichi':
-        dataset = Taichi('train', transform, True)
-        dataset_test = Taichi('test', transform)
     else:
         raise NotImplementedError
 
@@ -159,10 +153,9 @@ def main(rank, world_size, args):
 if __name__ == "__main__":
     # training params
     parser = argparse.ArgumentParser()
-    parser.add_argument("--iter", type=int, default=800000)
+    parser.add_argument("--iter", type=int, default=350000)
     parser.add_argument("--size", type=int, default=256)
-    # parser.add_argument("--batch_size", type=int, default=64)
-    parser.add_argument("--batch_size", type=int, default=16)
+    parser.add_argument("--batch_size", type=int, default=12)
     parser.add_argument("--d_reg_every", type=int, default=16)
     parser.add_argument("--g_reg_every", type=int, default=4)
     parser.add_argument("--resume_ckpt", type=str, default=None)
