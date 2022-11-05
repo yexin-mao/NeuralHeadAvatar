@@ -18,3 +18,10 @@ To continue from a checkpoint, run
 CUDA_VISIBLE_DEVICES = 0,1,2,3 python train.py --exp_path <EXP_PATH> --exp_name <EXP_NAME> --resume_ckpt <CHECKPOINT_PATH>
 ```
 The path of the checkpoint should be provided in `<CHECKPOINT_PATH>`
+
+## 3. Evaluation
+To obtain L_1 and LPIPS results, put checkpoints under `./checkpoints` and run
+```shell script
+CUDA_VISIBLE_DEVICES = 0 python evaluation.py --dataset <DATASET> --save_path <SAVE_PATH>
+```
+Generated videos will be save under `<SAVE_PATH>`.
